@@ -27,12 +27,12 @@ public class ParameterizedLoggingExample {
         logger.warn("User {} has made {} unsuccessful login attempts.", username, attempts);
 
        
-        String fileName = "data.txt";
-        logger.error("Unable to open file {}.", fileName);
+        // String fileName = "data.txt";
+        // logger.error("Unable to open file {}.", fileName);
 
         
-        int itemCount = 15;
-        double totalPrice = 2499.99;
-        logger.info("Order contains {} items with a total price of ₹{}.", itemCount, totalPrice);
+        // int itemCount = 15;
+        // double totalPrice = 2499.99;
+        // logger.info("Order contains {} items with a total price of ₹{}.", itemCount, totalPrice);
     }
 }
