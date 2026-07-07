@@ -16,10 +16,10 @@ public class ApiService {
         this.restClient =restClient;
     }
 
-    // public String fetchData(){
-    //     String response = restClient.getResponse();
+    public String fetchData(){
+        String response = restClient.getResponse();
 
-    //     return  "Processed " + response;
+        return  "Processed " + response;
     }
 
 }
