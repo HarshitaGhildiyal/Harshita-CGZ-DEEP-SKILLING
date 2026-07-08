@@ -67,16 +67,16 @@ public class LibraryManagementSystem {
         return null;
     }
 
-    // public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    //     Book[] books = {
+        Book[] books = {
 
-    //             new Book(101, "Java Programming", "James Gosling"),
-    //             new Book(102, "Data Structures", "Mark Allen"),
-    //             new Book(103, "Operating Systems", "Galvin"),
-    //             new Book(104, "Computer Networks", "Andrew Tanenbaum"),
-    //             new Book(105, "Database Systems", "Elmasri")
-    //     };
+                new Book(101, "Java Programming", "James Gosling"),
+                new Book(102, "Data Structures", "Mark Allen"),
+                new Book(103, "Operating Systems", "Galvin"),
+                new Book(104, "Computer Networks", "Andrew Tanenbaum"),
+                new Book(105, "Database Systems", "Elmasri")
+        };
 
         
         System.out.println("Linear Search:");
