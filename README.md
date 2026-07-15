@@ -1,0 +1,1 @@
+This repository contains all the exercises and projects completed during the Cognizant Deep Skilling Program.
