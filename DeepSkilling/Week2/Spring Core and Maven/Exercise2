@@ -101,10 +101,10 @@ public class LibraryManagementApplication {
 
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-
+<!-- 
         BookService service =
                 context.getBean("bookService", BookService.class);
 
         service.addBook();
     }
-}
+} -->
