@@ -1,0 +1,110 @@
+//XML
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.library</groupId>
+    <artifactId>LibraryManagement</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.1.8</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
+
+//BOOK REPO
+
+package com.library.repository;
+
+public class BookRepository {
+
+    public void saveBook() {
+        System.out.println("Book data saved successfully.");
+    }
+
+}
+
+//BOOKSERVICE
+
+package com.library.service;
+
+import com.library.repository.BookRepository;
+
+public class BookService {
+
+    private BookRepository bookRepository;
+
+    // Setter Injection
+    public void setBookRepository(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
+    public void addBook() {
+        System.out.println("Book Service Executed");
+        bookRepository.saveBook();
+    }
+
+}
+
+//APPLICATION CONTEXT
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookRepository"
+          class="com.library.repository.BookRepository"/>
+
+    <bean id="bookService"
+          class="com.library.service.BookService">
+
+        <property name="bookRepository"
+                  ref="bookRepository"/>
+
+    </bean>
+
+</beans>
+
+//LIBRARY MANAGEMENT APPLICATION
+
+package com.library;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.library.service.BookService;
+
+public class LibraryManagementApplication {
+
+    public static void main(String[] args) {
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        BookService service =
+                context.getBean("bookService", BookService.class);
+
+        service.addBook();
+    }
+}
