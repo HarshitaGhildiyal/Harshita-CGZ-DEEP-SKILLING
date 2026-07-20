@@ -72,7 +72,7 @@ public class BookService {
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!-- 
     <!-- <bean id="bookRepository"
           class="com.library.repository.BookRepository"/>
 
@@ -82,7 +82,7 @@ public class BookService {
         <property name="bookRepository"
                   ref="bookRepository"/>
 
-    </bean> -->
+    </bean> --> -->
 
 </beans>
 
