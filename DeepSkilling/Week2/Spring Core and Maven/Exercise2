@@ -55,10 +55,10 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    <!-- public void addBook() {
+    public void addBook() {
         System.out.println("Book Service Executed");
         bookRepository.saveBook();
-    } -->
+    }
 
 }
 
