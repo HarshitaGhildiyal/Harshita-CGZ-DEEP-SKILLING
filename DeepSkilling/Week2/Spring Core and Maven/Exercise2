@@ -30,7 +30,7 @@
 
 //BOOK REPO
 
-<!-- package com.library.repository;
+package com.library.repository;
 
 public class BookRepository {
 
@@ -38,7 +38,7 @@ public class BookRepository {
         System.out.println("Book data saved successfully.");
     }
 
-} -->
+}
 
 //BOOKSERVICE
 
