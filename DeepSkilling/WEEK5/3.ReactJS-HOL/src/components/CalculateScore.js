@@ -26,4 +26,4 @@ function CalculateScore(props) {
   );
 }
 
-// export default CalculateScore;
+export default CalculateScore;
