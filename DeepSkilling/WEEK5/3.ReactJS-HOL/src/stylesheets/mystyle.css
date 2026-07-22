@@ -1,0 +1,33 @@
+.score-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background-color: #f8fbff;
+  color: #102a43;
+  text-align: left;
+}
+
+.score-card h1 {
+  margin: 0 0 8px;
+  color: #243b53;
+  font-size: 28px;
+  text-align: center;
+}
+
+.score-card h2 {
+  margin: 0 0 24px;
+  color: #486581;
+  font-size: 22px;
+  text-align: center;
+}
+
+.score-card p {
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+.score-card span {
+  font-weight: 700;
+}
